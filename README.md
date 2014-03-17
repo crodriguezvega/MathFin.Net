@@ -1,7 +1,7 @@
 Option pricing using PDEs in .Net
 =================================
 
-.Net library written in C# for option pricing using PDEs (Partial Differential Equations). The library is written using .Net Framework version 4.5. Currently the library implements three Finite Difference methods for the calculation of the option price surface:
+.Net library written in C# for option pricing using PDEs (Partial Differential Equations). The library is written using .Net Framework version 4.5. Currently the library implements three finite difference methods for the calculation of the option price surface:
 
 - explicit,
 - implicit,
