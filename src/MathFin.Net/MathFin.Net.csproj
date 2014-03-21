@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81D52A28-84A1-4765-AD7C-419972A9DAB8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{6D744AE7-DC68-438F-8B36-739DF9263E97}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Examples</RootNamespace>
-    <AssemblyName>Examples</AssemblyName>
+    <RootNamespace>MathFin.Net</RootNamespace>
+    <AssemblyName>MathFin.Net</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,16 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\..\build\release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MathNet.Numerics">
@@ -47,18 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EuropeanStrangeSpread.cs" />
+    <Compile Include="BlackScholesModel.cs" />
+    <Compile Include="ExtensionMethods\DenseMatrixExtension.cs" />
+    <Compile Include="Options\EuropeanBearSpread.cs" />
+    <Compile Include="Options\EuropeanBullSpread.cs" />
+    <Compile Include="Options\EuropeanCall.cs" />
+    <Compile Include="Options\EuropeanPut.cs" />
+    <Compile Include="Options\EuropeanStrangleSpread.cs" />
+    <Compile Include="Options\IOption.cs" />
+    <Compile Include="PDE\Conditions.cs" />
+    <Compile Include="PDE\DiscretizationParameters.cs" />
+    <Compile Include="PDE\FiniteDifference\CrankNicolson.cs" />
+    <Compile Include="PDE\FiniteDifference\ExplicitMethod.cs" />
+    <Compile Include="PDE\FiniteDifference\ImplicitMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MathFin.Net\MathFin.Net.csproj">
-      <Project>{6d744ae7-dc68-438f-8b36-739df9263e97}</Project>
-      <Name>MathFin.Net</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

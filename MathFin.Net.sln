@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathFin.Net", "src\MathFinNet\MathFin.Net.csproj", "{6D744AE7-DC68-438F-8B36-739DF9263E97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathFin.Net", "src\MathFin.Net\MathFin.Net.csproj", "{6D744AE7-DC68-438F-8B36-739DF9263E97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "src\Examples\Examples.csproj", "{81D52A28-84A1-4765-AD7C-419972A9DAB8}"
 EndProject
