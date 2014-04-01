@@ -144,7 +144,7 @@ namespace MathFinNet.PDE.FiniteDifference
     /// <param name="model">Black-Scholes model.</param>
     /// <param name="dp">Discretization parameters for the grid.</param>
     /// <param name="conditions">Boundary and terminal conditions.</param>
-    public static void Solve(DenseMatrix V, IOption option, BlackScholesModel model, DiscretizationParameters dp, Conditions conditions)
+    public static void Solve(ref DenseMatrix V, IOption option, BlackScholesModel model, DiscretizationParameters dp, Conditions conditions)
     {
       // Terminal condition
       for (int j = 0; j <= dp.jMax; j++)
