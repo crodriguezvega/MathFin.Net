@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MathFinNet
+﻿namespace MathFin.Net
 {
   /// <summary>
   /// Black-Scholes model of a financial market.

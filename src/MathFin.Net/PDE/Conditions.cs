@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MathFinNet.PDE
+namespace MathFin.Net.PDE
 {
   /// <summary>
   /// Terminal and boundary conditions to be applied when solving the Black-Scholes PDE.

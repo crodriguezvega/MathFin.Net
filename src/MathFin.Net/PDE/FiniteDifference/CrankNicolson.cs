@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.LinearAlgebra.Single.Solvers;
 
-using MathFinNet.Options;
+using MathFin.Net.Options;
 
-namespace MathFinNet.PDE.FiniteDifference
+namespace MathFin.Net.PDE.FiniteDifference
 {
   /// <summary>
   /// A class to solve the Black-Scholes PDE using the Crank-Nicolson method.

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
-using MathFinNet.Options;
+using MathFin.Net.Options;
 
 namespace UnitTests.OptionsTests
 {
@@ -19,19 +15,18 @@ namespace UnitTests.OptionsTests
     /// Verifies that the EuropeanPut class throws an exception when used without a strike price.
     /// </summary>
     [Test]
-    [ExpectedException(typeof(IndexOutOfRangeException))]
     public void EuropeanPutOptionWithoutStrikePrice()
     {
       var option = new EuropeanPut(1);
-      option.Payoff(100);
+      Assert.Throws<IndexOutOfRangeException>(() => option.Payoff(100));
     }
 
     /// <summary>
     /// Verifies that the EuropeanPut class returns the correct payoff.
     /// </summary>
     /// <param name="spotPrice">Asset's spot price.</param>
-    [TestCase(100, Result = 50, TestName = "EuropeanPutOptionWithSpotPriceBelowStrikePrice")]
-    [TestCase(150, Result = 0, TestName = "EuropeanPutOptionWithSpotPriceAboveStrikePrice")]
+    [TestCase(100, ExpectedResult = 50, TestName = "EuropeanPutOptionWithSpotPriceBelowStrikePrice")]
+    [TestCase(150, ExpectedResult = 0, TestName = "EuropeanPutOptionWithSpotPriceAboveStrikePrice")]
     public double EuropeanPutOptionWithStrikePrice(double spotPrice)
     {
       var option = new EuropeanPut(1, 150);

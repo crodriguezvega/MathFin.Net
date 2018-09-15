@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MathFin.Net.Options;
 
-using MathFinNet.Options;
-
-namespace MathFinNet.PDE
+namespace MathFin.Net.PDE
 {
   /// <summary>
   /// Parameters to discretize the time and asset price plane into a discrete grid where the Black-Scholes PDE will be solved.
@@ -38,15 +32,9 @@ namespace MathFinNet.PDE
     /// Computes the time increment.
     /// </summary>
     /// <value>The time increment.</value>
-    public double h
-    {
-      get
-      {
-        return (maxS - minS) / jMax;
-      }
-    }
+    public double h => (maxS - minS) / jMax;
 
-    /// <summary>
+      /// <summary>
     /// Computes the asset price at a given node.
     /// </summary>
     /// <param name="j">The node where the asset price should be calculated.</param>
